@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- vue是 -->
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 指定VUE实例的挂载位置 -->
+    <div id="app"></div>
+    <script>
+        /* 第一步：创建Vue实例
+         1.构造函数，通过new关键字调用
+         2.vue构造函数的参数：options（多个选项）
+            options参数是纯粹的js对象：{}，
+            在{}对象中可以编写大量的key:value对，一个key:value对就是一个配置项
+            主要是通过options这个参数来给Vue实例指定多个配置项
+        3.template配置项：
+            用来指定模板语句，模板语句是一个字符串形式的
+            模板语句：Vue框架自己制定了一些具有特殊含义的特殊符号
+                    可以是HTML代码，Vue中的特殊规则，HTML+Vue的特殊规则
+
+        */
+        const myVue=new Vue({
+            template:'<h1>Hello Vue</h1>'
+        })
+        /*第二步：将vue实例挂载到id=‘app'的元素位置
+
+        1.Vue实例都有一个$mount()方法，这个方法的作用是什么？
+            将vue实例挂载到指定位置
+        2.#app是id选择器，借鉴了css
+        */ 
+        
+        myVue.$mount('#app')
+    </script>
+</body>
+</html>

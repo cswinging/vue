@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <h1>{{msg}}</h1>
+            <h1>hhh</h1>
+        </div>
+    </div>
+    <script>
+        /*关于template配置项
+        1.template只能有一根节点
+        2.只要data中的数据发生变化，模板语句会重新编译（只要data变template就会重新编译重新渲染）
+        3.如果使用template配置项的话，指定挂载位置的元素会被替换
+        4.可以不使用用template，可以直接写到html标签中
+        5.也可以不使用$mount('#app')，可以使用el配置项作用：
+            告诉Vue实例去接管哪个容器
+        */
+        const myVue=new Vue({
+            // template:`
+            //     <div>
+            //         <h1>{{msg}}</h1>
+            //         <h1>hhh</h1>
+            //     </div>
+            // `,
+            data:{
+                msg:'Hello Vue!'
+            },
+            el:'#app'
+        })
+       
+    </script>
+</body>
+</html>
